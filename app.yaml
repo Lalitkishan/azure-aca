@@ -1,0 +1,15 @@
+name: my-web-app
+osType: Linux
+app:
+  name: my-web-app
+  containers:
+    - name: my-web-app
+      image: your-azure-registry/my-web-app:latest
+      ports:
+        - protocol: tcp
+          port: 80
+          target: 3000
+      resources:
+        requests:
+          cpu: 0.1
+          memoryInGB: 0.5
